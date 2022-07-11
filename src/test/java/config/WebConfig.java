@@ -5,7 +5,7 @@ import java.net.URL;
 
 //@Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:${start}.properties"
+        "classpath:${go}.properties"
 })
 public interface WebConfig extends Config {
 
