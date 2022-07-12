@@ -17,12 +17,13 @@ public class TestBase {
         WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
         Configuration.browser = webConfig.getBrowser();
         Configuration.browserVersion = webConfig.getBrowserVersion();
+        if (!webConfig.getRemoteWebDriver().equals("")) {
+            Configuration.remote = webConfig.getRemoteWebDriver();
+        }
         String baseUrlString = System.getProperty("baseUrl");
         isNull(baseUrlString);
         baseUrlString = "https://google.com";
         open(baseUrlString);
-        if (!webConfig.getRemoteWebDriver().equals("")) {
-            Configuration.remote = webConfig.getRemoteWebDriver();
-        }
+
     }
 }
