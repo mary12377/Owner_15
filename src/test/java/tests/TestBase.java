@@ -21,5 +21,8 @@ public class TestBase {
         isNull(baseUrlString);
         baseUrlString = "https://google.com";
         open(baseUrlString);
+        if (!webConfig.getRemoteWebDriver().equals("")) {
+            Configuration.remote = webConfig.getRemoteWebDriver();
+        }
     }
 }

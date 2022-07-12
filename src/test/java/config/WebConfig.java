@@ -5,7 +5,7 @@ import java.net.URL;
 
 //@Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:${go}.properties"
+        "classpath:config/${go}.properties"
 })
 public interface WebConfig extends Config {
 
@@ -20,11 +20,5 @@ public interface WebConfig extends Config {
     @Key("remoteWebDriver")
     String getRemoteWebDriver();
 
-    @Key("remoteURL")
-    URL getRemoteURL();
-
-    @Key("baseUrl")
-    @DefaultValue("https://www.google.com/")
-    String getBaseURL();
 
 }
